@@ -1,0 +1,120 @@
+:root {
+    --main-bg-color: rgba(255, 255, 255, 0.9);
+    --button-section-bg-color: #0e1212;
+    --main-text-color: rgba(22, 21, 21, 1);
+    --button-text-color: rgba(255, 255, 255, 0.7);
+    --button-border-color: rgba(255, 255, 255, 0.4);
+    --main-higlight-color: #00C598;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-text-color);
+    font-size: 6rem;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+h2 {
+    color: white;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.button-section > button {
+    margin: 8em 1em;
+}
+
+.button-section {
+    background-color: var(--button-section-bg-color);
+}
+
+.btn-container {
+    height: 2em;
+}
+
+.ok-btn {
+    background-color: transparent;
+    padding: 1px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid var(--button-border-color);
+    color: var(--button-text-color);
+    transition: all 0.1s linear;
+}
+
+.ok-btn:hover {
+    border: 1px solid var(--button-border-color);
+    width: 80px;
+    height: 80px;
+}
+
+.btn2 {
+    position: relative;
+    border: none;
+}
+
+.btn2:hover {
+    border: none;
+}
+
+.btn2::after {
+    content: "OK";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color: transparent;
+    width: 42px;
+    height: 42px;
+    border: 3px solid var(--button-border-color);
+    border-radius: 50%;
+    transition: all 0.1s linear;
+}
+
+.btn2:hover::after {
+    border: 1px solid var(--button-border-color);
+    border-left-color: var(--main-higlight-color);
+    animation: rotating 2s linear infinite;
+    height: 79px;
+    width: 79px;
+    
+}
+
+.btn2:active::after {
+    border: 3px solid var(--button-border-color);
+    border-left-color: var(--main-higlight-color);
+}
+
+.btn3:active {
+    border: 3px solid var(--main-higlight-color);
+}
+
+
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
